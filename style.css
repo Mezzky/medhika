@@ -1,0 +1,133 @@
+/*========= FONT FAMILY =========*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;800;900&family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+/*========= CSS VARIABLE =========*/
+:root {
+    --main-font: "Poppins";
+    --main-color: #5B95DB;
+    --second-color: #E8E8E8;
+    --tittle-color: #484F5C;
+    --text-color: #5A5A5A;
+}
+
+/*========= CSS RESET =========*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--main-font);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: url(img/bg-img.png)
+                no-repeat
+                center
+                fixed;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+input:focus{
+    outline: none;
+}
+
+/*========= MAIN STYLE =========*/
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 75%;
+    background-color: rgba(255, 255, 255, 20%);
+    border-radius: 10px;
+    padding: 120px 20px;
+}
+
+.container .form-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.container .form-box h1{
+    align-self: center;
+    color: var(--text-color);
+}
+
+.container .form-box form{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    gap: 30px;
+}
+
+.container .form-box form .input-box{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.container .form-box form .input-box label{
+    color: var(--text-color);
+}
+
+.container .form-box form .input-box input{
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.container .form-box form #login{
+    cursor: pointer;
+    background-color: var(--main-color);
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px;
+    border-radius: 5px;
+    transition: 100ms ease-in;
+}
+.container .form-box form #login:hover{
+    background-color: #7cb3f7;
+}
+
+/*========= RESPONSIVE =========*/
+/* Mobile */
+@media screen and (max-width:480px) {
+    .container{
+        padding: 80px 20px;
+        grid-template-columns: 1fr;
+        width: 80%;
+    }
+
+    .container .form-box form{
+        width: 90%;
+    }
+}
+
+/* Mobile S */
+@media screen and (max-width:320px){
+    .container{
+        width: 100%;
+    }
+}
